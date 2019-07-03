@@ -59,3 +59,12 @@ typings/
 
 # next.js build output
 .next
+
+# build component lib
+/lib
+
+# built docs
+/docs
+
+# generated component data
+/config/componentData.js
