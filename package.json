@@ -17,6 +17,7 @@
     "css-loader": "2.1.1",
     "dotenv": "6.2.0",
     "dotenv-expand": "4.2.0",
+    "enzyme": "^3.2.0",
     "eslint": "^5.16.0",
     "eslint-config-react-app": "^4.0.1",
     "eslint-loader": "2.1.2",
@@ -45,13 +46,15 @@
     "postcss-safe-parser": "4.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-addons-test-utils": "^15.6.2",
     "react-app-polyfill": "^1.0.1",
-    "react-dev-utils": "^9.0.1",
     "react-dom": "^16.8.6",
+    "react-test-renderer": "15.4.2",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
     "semver": "6.0.0",
     "style-loader": "0.23.1",
+    "styled-components": "^1.4.5",
     "terser-webpack-plugin": "1.2.3",
     "ts-pnp": "1.1.2",
     "url-loader": "1.1.2",
@@ -60,14 +63,17 @@
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "4.2.0"
   },
+  "homepage": "http://bhaall.github.io/loot-react-lm/",
   "scripts": {
     "prestart": "npm run gen:docs",
     "start": "npm-run-all --parallel start:docs gen:docs-watch",
     "start:docs": "node scripts/start.js",
     "gen:docs": "node scripts/generateComponentData.js",
     "gen:docs-watch": "npm run gen:docs -- --watch",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "build:docs": "node scripts/build.js",
+    "test": "node scripts/test.js",
+    "predeploy:docs": "npm run build:docs",
+    "deploy:docs": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -90,7 +96,8 @@
       "!src/**/*.d.ts"
     ],
     "setupFiles": [
-      "react-app-polyfill/jsdom"
+      "react-app-polyfill/jsdom",
+      "<rootDir>/src/helpers/test_configs/SetUpTest.js"
     ],
     "setupFilesAfterEnv": [],
     "testMatch": [
@@ -136,7 +143,14 @@
   },
   "devDependencies": {
     "chokidar": "^1.6.1",
+    "enzyme": "^2.9.1",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "gh-pages": "^2.0.1",
     "npm-run-all": "^4.0.2",
-    "react-docgen": "^2.14.0"
+    "react-addons-test-utils": "^15.6.2",
+    "react-dev-utils": "^9.0.1",
+    "react-docgen": "^2.14.0",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.5.4"
   }
 }

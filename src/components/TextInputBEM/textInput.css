@@ -1,0 +1,16 @@
+/* In real app, we would use Sass. */
+
+/* Block */
+.textinput {
+  margin-bottom: 16px;
+}
+
+/* Element */
+.textinput__error {
+  color: #e45353;
+}
+
+/* Modifier */
+.textinput__input--state-error {
+  border: solid 1px #e45353;
+}
