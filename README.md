@@ -11,6 +11,6 @@ npm install loot-react-lm
 [Component documentation](https://bhaall.github.io/loot-react-lm)
 
 ## Component Hall of Fame 🎉
-Here's a list of components built by your fellow viewers!
+Here's a list of components built!
 
-Submit a pull request to add your link here... :)
+Submit a pull request to add a link here... :)
