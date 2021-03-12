@@ -180,7 +180,7 @@
     "prop-types": "^15.7.2",
     "react-addons-test-utils": "^15.6.2",
     "react-app-polyfill": "^1.0.1",
-    "react-dev-utils": "^9.0.1",
+    "react-dev-utils": "^11.0.4",
     "react-docgen": "^2.14.0",
     "react-test-renderer": "^15.5.4",
     "resolve": "1.10.0",
